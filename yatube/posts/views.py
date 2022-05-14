@@ -4,7 +4,6 @@ from .models import Post, User
 from .models import Group
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
-import logging
 
 
 POSTS_COUNT = 10
