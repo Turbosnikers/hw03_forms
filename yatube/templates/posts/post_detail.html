@@ -30,9 +30,11 @@
     <article class="col-12 col-md-9">
       <p> {{ post.text }} </p>
       <div class="d-flex justify-content">
-        <button type="submit" class="btn btn-outline-primary">
-          <a href="{% url 'posts:post_edit' post.pk %}">Редактировать запись</a>     
-        </button> 
+        {% if post.author == request.user  %}
+          <button type="submit" class="btn btn-outline-primary">
+            <a href="{% url 'posts:post_edit' post.pk %}">Редактировать запись</a>
+          </button> 
+        {% endif %}
       </div>
     </article>
   </div>

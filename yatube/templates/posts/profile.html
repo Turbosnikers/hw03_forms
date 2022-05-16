@@ -4,7 +4,7 @@
 {% block content %}
   {% for post in page_obj %}
     <h1> Все посты пользователя {{ author }} </h1>        
-    <h3> Всего постов: {{ author_count }} </h3>   
+    <h3> Всего постов: {{ author.posts.count }} </h3>   
     <article>
       <ul>
         <li> Дата публикации: {{ posts.pub_date|date:"d E Y" }} </li>
