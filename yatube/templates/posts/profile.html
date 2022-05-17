@@ -7,7 +7,7 @@
     <h3> Всего постов: {{ author.posts.count }} </h3>   
     <article>
       <ul>
-        <li> Дата публикации: {{ posts.pub_date|date:"d E Y" }} </li>
+        <li> Дата публикации: {{ post.pub_date|date:"d E Y" }} </li>
       </ul>
       <p> {{ post.text }} </p>
       <p>
